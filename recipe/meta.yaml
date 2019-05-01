@@ -7,9 +7,11 @@
 # https://github.com/conda-forge/mpi-feedstock
 # https://github.com/conda-forge/spyder-feedstock
 
+{% set version = "4.9.1" %}
+
 package:
   name: mercurial-app
-  version: 1.0
+  version: {{ version }}
 
 build:
   number: 0
@@ -17,10 +19,12 @@ build:
 requirements:
   run:
     - python <3
-    - mercurial
+    - mercurial=={{ version }}
     - hg-evolve
     - dulwich
     - ipaddress  # [py==27]
+    # tmp, see https://github.com/conda-forge/urllib3-feedstock/issues/25
+    - brotlipy
 
 test:
   commands:
