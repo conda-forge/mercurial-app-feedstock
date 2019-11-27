@@ -19,7 +19,7 @@ build:
 requirements:
   run:
     - python <3
-    - mercurial=={{ version }}
+    - mercurial =={{ version }}
     - hg-evolve
     - dulwich
     - ipaddress  # [py==27]
