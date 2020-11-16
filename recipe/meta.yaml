@@ -7,7 +7,7 @@
 # https://github.com/conda-forge/mpi-feedstock
 # https://github.com/conda-forge/spyder-feedstock
 
-{% set version = "5.2" %}
+{% set version = "5.4" %}
 
 package:
   name: mercurial-app
@@ -18,9 +18,10 @@ build:
 
 requirements:
   run:
-    - python <3
+    - python
     - mercurial =={{ version }}
     - hg-evolve
+    - hg-git
     - dulwich
     - ipaddress  # [py==27]
     # tmp, see https://github.com/conda-forge/urllib3-feedstock/issues/25
@@ -38,7 +39,7 @@ app:
 
 about:
   home: https://github.com/conda-forge/mercurial-app-feedstock
-  license: GPL2
+  license: GPL-2.0-or-later
   license_file: LICENSE.txt
   summary: Source control management tool
 
