@@ -15,6 +15,7 @@ package:
 
 build:
   number: 0
+  skip: true  # [win and py3k]
 
 requirements:
   run:
