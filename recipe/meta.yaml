@@ -5,7 +5,7 @@
 # https://github.com/conda-forge/mpi-feedstock
 # https://github.com/conda-forge/spyder-feedstock
 
-{% set version = "6.2.1" %}
+{% set version = "6.7.4" %}
 
 package:
   name: mercurial-app
@@ -24,7 +24,8 @@ requirements:
 
 test:
   commands:
-    - hg --version
+    - hg version -v
+    - hg debuginstall
 
 app:
   entry: hg
