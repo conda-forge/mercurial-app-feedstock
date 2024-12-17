@@ -28,7 +28,7 @@ test:
     - pip check
     - hg version -v
     - hg debuginstall
-    - hg setup -h
+    - hg-setup -h
 
 app:
   entry: hg
