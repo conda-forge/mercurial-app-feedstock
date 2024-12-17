@@ -13,16 +13,21 @@ build:
 
 requirements:
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - mercurial =={{ version }}
     - hg-evolve
     - hg-git
     - hg-setup
 
 test:
+  requires:
+    - python {{ python_min }}
+    - pip
   commands:
+    - pip check
     - hg version -v
     - hg debuginstall
+    - hg setup -h
 
 app:
   entry: hg
